@@ -1,6 +1,8 @@
 #include <iostream>
 using namespace std;
 
+
+//Linux 给sort添加注释
 void sort(int arr[],int size){
     int tmp = 0;
 	for(int i = 0; i < size - 1; ++i)
@@ -25,7 +27,6 @@ int main(int argc, char * argv[]){
     int size = sizeof(arr)/sizeof(arr[0]);
 
     sort(arr,size);
-
     return 0;
 }
 
