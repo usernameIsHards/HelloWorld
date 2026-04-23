@@ -5,6 +5,7 @@ using namespace std;
 //Linux 给sort添加注释
 void sort(int arr[],int size){
     int tmp = 0;
+    bool flag = false;
 	for(int i = 0; i < size - 1; ++i)
 	{
 		for(int j = 0 ; j < size - i; ++j)
@@ -12,11 +13,17 @@ void sort(int arr[],int size){
 			//Windows 修改排序算法，从大到小排序
 			if(arr[j] < arr[j + 1])
 			{
-				tmp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = tmp;
+				    tmp = arr[j];
+				    arr[j] = arr[j + 1];
+				    arr[j + 1] = tmp;
+                    flag = true;
 			}
 		}
+
+        if(!flag)
+        {
+            break;
+        }
 		
 	}
 }
